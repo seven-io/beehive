@@ -1,11 +1,13 @@
-# [Sms77](https://www.sms77.io) for [Beehive](https://github.com/muesli/beehive)
+![](https://www.seven.io/wp-content/uploads/Logo.svg "seven Logo")
+
+# [seven](https://www.seven.io) for [Beehive](https://github.com/muesli/beehive)
 
 Send SMS message(s) to phone number(s).
 
 ## Installation
 
-1. Fetch the package by running `go get github.com/sms77io/beehive`
-2. Add `"github.com/sms77io/beehive"` to `import` in `hives.go`
+1. Fetch the package by running `go get github.com/seven-io/beehive`
+2. Add `"github.com/seven-io/beehive"` to `import` in `hives.go`
 3. Download module dependencies by running `go mod download`
 4. Recompile the binary by running `make`
 
@@ -15,13 +17,13 @@ Send SMS message(s) to phone number(s).
 {
   "Bees": [
     {
-      "Name": "Sms77 SMS Example Bee",
-      "Class": "sms77bee",
-      "Description": "A bee to demonstrate Sms77 with Beehive",
+      "Name": "seven SMS Example Bee",
+      "Class": "sevenbee",
+      "Description": "A bee to demonstrate seven with Beehive",
       "Options": [
         {
           "Name": "api_key",
-          "Value": "YOUR_SMS77_API_KEY"
+          "Value": "YOUR_SEVEN_API_KEY"
         },
         {
           "Name": "from",
@@ -37,11 +39,11 @@ Send SMS message(s) to phone number(s).
 }
 ```
 
-**api_key**: Sms77 API key. Sign up and get one for free from [Sms77](https://www.sms77.io/anmelden).
+**api_key**: seven [API key](https://help.seven.io/en/api-key-access). Sign up and get one for free from [seven](https://www.seven.io/signup).
 
 **from**: Sender number. It may contain a maximum of 11 alphanumeric or 16 numeric characters.
 
-**to_number**:    Recipient number – possible are numbers and address book entries (groups and contacts). Multiple
+**to_number**: Recipient number – possible are numbers and address book entries (groups and contacts). Multiple
 recipients can be specified separated by commas.
 
 #### Actions
@@ -53,7 +55,7 @@ event received:
 {
   "Actions": [
     {
-      "Bee": "Sms77 SMS Example Bee",
+      "Bee": "seven SMS Example Bee",
       "Name": "sms",
       "Options": [
         {
@@ -69,6 +71,6 @@ event received:
 
 ###### Support
 
-Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact/).
+Need help? Feel free to [contact us](https://www.seven.io/en/company/contact/).
 
-[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](./LICENSE)
+[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)

@@ -1,16 +1,16 @@
-package sms77bee
+package sevenbee
 
 import (
 	"github.com/muesli/beehive/bees"
 )
 
-type Sms77BeeFactory struct {
+type SevenBeeFactory struct {
 	bees.BeeFactory
 }
 
 // New returns a new Bee instance configured with the supplied options.
-func (factory *Sms77BeeFactory) New(name, description string, options bees.BeeOptions) bees.BeeInterface {
-	bee := Sms77Bee{
+func (factory *SevenBeeFactory) New(name, description string, options bees.BeeOptions) bees.BeeInterface {
+	bee := SevenBee{
 		Bee: bees.NewBee(name, factory.ID(), description, options),
 	}
 	bee.ReloadOptions(options)
@@ -19,36 +19,36 @@ func (factory *Sms77BeeFactory) New(name, description string, options bees.BeeOp
 }
 
 // ID returns the ID of this Bee.
-func (factory *Sms77BeeFactory) ID() string {
-	return "sms77bee"
+func (factory *SevenBeeFactory) ID() string {
+	return "sevenbee"
 }
 
 // Name returns the name of this Bee.
-func (factory *Sms77BeeFactory) Name() string {
-	return "Sms77"
+func (factory *SevenBeeFactory) Name() string {
+	return "seven"
 }
 
 // Description returns the description of this Bee.
-func (factory *Sms77BeeFactory) Description() string {
+func (factory *SevenBeeFactory) Description() string {
 	return "Sends SMS messages"
 }
 
 // Image returns the filename of an image for this Bee.
-func (factory *Sms77BeeFactory) Image() string {
+func (factory *SevenBeeFactory) Image() string {
 	return factory.ID() + ".png"
 }
 
 // LogoColor returns the preferred logo background color (used by the admin interface).
-func (factory *Sms77BeeFactory) LogoColor() string {
+func (factory *SevenBeeFactory) LogoColor() string {
 	return "#18D46A"
 }
 
 // Options returns the options available to configure this Bee.
-func (factory *Sms77BeeFactory) Options() []bees.BeeOptionDescriptor {
+func (factory *SevenBeeFactory) Options() []bees.BeeOptionDescriptor {
 	opts := []bees.BeeOptionDescriptor{
 		{
 			Name:        "api_key",
-			Description: "Sms77 API key",
+			Description: "seven API key",
 			Type:        "string",
 			Mandatory:   true,
 		},
@@ -69,7 +69,7 @@ func (factory *Sms77BeeFactory) Options() []bees.BeeOptionDescriptor {
 }
 
 // Actions describes the available actions provided by this Bee.
-func (factory *Sms77BeeFactory) Actions() []bees.ActionDescriptor {
+func (factory *SevenBeeFactory) Actions() []bees.ActionDescriptor {
 	actions := []bees.ActionDescriptor{
 		{
 			Namespace:   factory.Name(),
@@ -89,6 +89,6 @@ func (factory *Sms77BeeFactory) Actions() []bees.ActionDescriptor {
 }
 
 func init() {
-	f := Sms77BeeFactory{}
+	f := SevenBeeFactory{}
 	bees.RegisterFactory(&f)
 }
